@@ -1,0 +1,148 @@
+.ContaineTodoItem1 {
+    
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    width:680px;
+    border-width: 2px;
+    border-style: dotted;
+    border-radius: 15px;
+    margin: 1vh;
+   
+}
+
+.table1{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    border-width: 2px;
+    border-color: gray;
+    border-radius: 15PX;
+    background-color: rgb(208, 255, 0);
+    margin:3px;
+}
+
+.tableTOP1{
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    border-width: 2px;
+    border-color: gray;
+    border-radius: 15PX;
+    background-color: rgb(0, 0, 0);
+    margin:3px;
+
+    h5 {
+        width: 30%;
+        font-size: 1rem;
+        font-family: 'Poppins', sans-serif;
+        color: rgb(208, 255, 0);
+        text-align: start;
+        padding-left: 5vh;
+        margin-right: -13vh;
+    }
+
+    #status1{
+       
+      width:600px;      
+        text-align:center;
+    }
+}
+  
+ 
+
+  h5 {
+    width: 30%;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    
+  }
+
+ .btn-grad1{
+position: static;
+    text-transform:uppercase;
+    font-size:1rem;
+    text-decoration:solid;
+    background:transparent;  
+    border-width: 2px;
+    border-style: dotted;
+    border-radius: 8px;
+    padding: 4px; 
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    left: 15px;
+    width:120px;
+   
+    
+  }
+
+
+
+.checkbox-JASoftoff1 {
+	display: inline-block;
+	position: relative;
+    width: 70px;
+	height: 40px;
+	background: #555;
+	border-radius: 15px;
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.6), 0px 1px 0px rgba(255,255,255,0.3);  
+    visibility: hidden;  
+    
+    #checkAvanzado1{
+    padding-top: 10px;
+       display: flex;
+       flex-direction: row;
+       justify-content: flex-start;
+        width: 40px;
+        height: 32px;
+        background: rgb(255, 255, 255);
+        border-radius: 13px;
+        cursor: pointer;
+        transition:0.5s ;
+    }
+}
+
+.checkbox-JASofton1 {
+	display: flex;
+    justify-content:flex-start;
+    width: 70px;
+	height: 40px;
+	background:green;
+	border-radius: 15px;
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.6), 0px 1px 0px rgba(255,255,255,0.3); 
+    visibility: hidden;  
+    
+    #checkAvanzado1{
+
+    padding-top: 10px;
+       display: flex;
+       position: relative;
+       left:30px;
+        width: 40px;
+        height: 32px;
+        background: rgb(255, 255, 255);
+        border-radius: 13px;
+        cursor: pointer;
+        transform:skewX(20px);
+        transition: 0.5s;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

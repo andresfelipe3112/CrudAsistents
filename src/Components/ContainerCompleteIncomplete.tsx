@@ -135,7 +135,7 @@ export default function ContainerCompleteIncomplete({ actualizacion, todos, onSe
                                 <h5>{task}</h5>
 
                                 <button onClick={deleteButton}>Delete</button>
-                                <button className="btn-grad1">{isCompleted ? "Completed" : "inCompleted"}</button>
+                                <button className="btn-grad1">{isCompleted ? "Complete" : "inComplete"}</button>
                                 <div className={isCompleted ? "checkbox-JASofton1" : "checkbox-JASoftoff1"}>
                                     <div onClick={changueComplete} id="checkAvanzado1"></div>
                                     <label htmlFor="checkAvanzado"></label>

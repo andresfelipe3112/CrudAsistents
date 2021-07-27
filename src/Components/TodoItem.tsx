@@ -125,7 +125,7 @@ export default function TodoItem({ todos, onSelectLanguage }: any,) {
                         <h5>{task}</h5>
 
                         <button onClick={deleteButton}>Delete</button>
-                        <button className="btn-grad">{isCompleted ? "Completed" : "inCompleted"}</button>
+                        <button className="btn-grad">{isCompleted ? "Complete" : "inComplete"}</button>
                         <div className={isCompleted ? "checkbox-JASofton" : "checkbox-JASoftoff"}>
                             <div onClick={changueComplete} id="checkAvanzado"></div>
                             <label htmlFor="checkAvanzado"></label>

@@ -1,35 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import CreateContainer from './CreateContainer';
 import ContainerCompleteIncomplete from "./ContainerCompleteIncomplete"
 import TodoItem from './TodoItem';
 import axios from "axios";
 import "../archivosSCSS/TodoContainer.scss"
+import { data } from "../interface_tsx/interface"
+
+
 
 export default function TodoContainer() {
 
-    interface data {
-        student: string,
-        task: string,
-    }
 
+    //UseSatate
 
     const [dataInput, setdataInput] = useState({
         student: "",
         task: ""
     })
 
-
-
-
     const [todos, setTodos] = useState({});
     const [actualizacion, setactualizacion] = useState(true)
 
+
+
+    //function
 
     const handleLanguage = (input: data) => {
         setdataInput(input);
     }
 
-    const handleLanguageTwo = (boleanor: boolean) => {
+    const handleLanguageTwo = (boleanor: boolean) => { //actualiza el componente con cada cambio
         setactualizacion(boleanor)
     }
 
@@ -38,7 +38,7 @@ export default function TodoContainer() {
     }
 
 
-
+    //useEffect
 
     useEffect(() => {
         if (dataInput) {
@@ -53,9 +53,9 @@ export default function TodoContainer() {
     }, [dataInput])
 
 
+
+    //actualiza el estado segúin el estate actualización
     useEffect(() => {
-
-
         if (actualizacion === false || actualizacion === true) {
         } axios({
             method: 'get',
@@ -73,10 +73,12 @@ export default function TodoContainer() {
 
     return (
         <div className="container">
+
             <div className="container1">
                 <CreateContainer onSelectLanguage={handleLanguage} />
                 <TodoItem todos={todos} onSelectLanguage={handleLanguageTwo} />
             </div>
+
             <div className="container2">
                 <ContainerCompleteIncomplete actualizacion={actualizacion} todos={todos} onSelectLanguageOne={handleLanguageOne} />
             </div>

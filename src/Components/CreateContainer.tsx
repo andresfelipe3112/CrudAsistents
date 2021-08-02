@@ -6,16 +6,21 @@ import axios from "axios";
 
 export default function CreateContainer(prop: any) {
 
+
+    //interface TypeScript
     interface data {
         student: string | null,
         task: string | null,
     }
+
+    //useState
 
     const [datainput, setDatainput] = useState((prevState: any) => prevState)
     const { register, handleSubmit, formState: { errors } } = useForm()
 
 
 
+    //funtion
     const onSubmit = (data: data, e: any) => {
 
         let obj = {
@@ -31,7 +36,7 @@ export default function CreateContainer(prop: any) {
         });
     }
 
-
+    // crear APi
     const sendstudent = async (datainput: any) => {
         axios({
             method: 'POST',
@@ -73,36 +78,36 @@ export default function CreateContainer(prop: any) {
                 <label>
                     Name:
                     <input
+
                         placeholder="student´s name"
                         {...register("student", { required: true, maxLength: 20 })} />
 
+                    {/* genera el error si no se cumple con el formulario */}
                     <span className="text-danger">
                         {errors.firstName?.type === 'required' && "First name is required"}
-
                     </span>
-
-
                 </label>
+
+
                 <label>
                     Task:
                     <input
                         placeholder="task"
                         {...register("task", { required: true, maxLength: 20 })} />
 
+                    {/* genera el error si no se cumple con el formulario */}
                     <span className="text-danger text-small d-block mb-2">
                         {errors.firstName?.type === 'required' && "First name is required"}
-
                     </span>
                 </label>
+
                 <button className="btn draw-border"
                     type="submit"
                 >
                     Agregar
                 </button>
 
-
             </form>
-
         </div>
     )
 }

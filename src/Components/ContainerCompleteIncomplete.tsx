@@ -7,6 +7,7 @@ import axios from "axios";
 export default function ContainerCompleteIncomplete({ actualizacion, todos, onSelectLanguageOne }: any,) {
 
 
+    //interface TypeScript
     interface Todo {
         id: string;
         task: string;
@@ -15,12 +16,13 @@ export default function ContainerCompleteIncomplete({ actualizacion, todos, onSe
         version: number;
     }
 
+    //useState
     const [data, setData] = useState("");
     const [bolenor, setBolenor] = useState(false);
 
 
 
-
+    //funtion
     const handleLanguageOne = () => {
         onSelectLanguageOne(bolenor);
     }
@@ -36,6 +38,7 @@ export default function ContainerCompleteIncomplete({ actualizacion, todos, onSe
         let newObj: {} = { ...elemetPUT[0], ...isCompleted }
 
 
+        //llamada API
         axios({
             method: 'PUT',
             url: `https://todos-go.herokuapp.com/api/todos/${e.target.parentNode.parentNode.id}`,
@@ -53,8 +56,7 @@ export default function ContainerCompleteIncomplete({ actualizacion, todos, onSe
             console.log(error);
         });
 
-
-
+        // cambio segun actulizacion del DOM
         if (e.target.parentElement.className === "checkbox-JASoftoff1") {
             e.target.parentElement.className = "checkbox-JASofton1";
             e.target.parentElement.style.backgroundColor = "green";
@@ -67,9 +69,8 @@ export default function ContainerCompleteIncomplete({ actualizacion, todos, onSe
     }
 
 
+    // Delete item API
     const deleteButton = (e: any) => {
-
-
 
         axios({
             method: 'DELETE',
@@ -90,9 +91,7 @@ export default function ContainerCompleteIncomplete({ actualizacion, todos, onSe
 
 
 
-
-
-
+    //useEfect para actulizar en tiempo real el dom cualquier cambio
     useEffect(() => {
 
         setData(todos.todos);
@@ -106,11 +105,6 @@ export default function ContainerCompleteIncomplete({ actualizacion, todos, onSe
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [todos])
-
-
-
-
-
 
 
 
